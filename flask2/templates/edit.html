@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+<br/>
+<br/>
+<br/>
+<h1 class="text-center mt-4">Welcome</h1>
+
+<!-- Bootstrap CSS -->
+<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/carousel.css') }}" rel="stylesheet">
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+<header class="masthead" style="background-color: yellow; background-blend-mode: overlay; background-size: cover; background-position: center;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="site-heading text-center">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Manage your posts and change them</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <h1>Basic Actions</h1>
+    <button   class="btn btn-primary text-white"> <a  class="btn btn-primary text-white" href="/dashboard">DashBoard Home</a></button>
+
+    
+    <button   class="btn btn-primary text-white"> <a  class="btn btn-primary text-white" href="/logout">LogOut</a></button>
+    <hr>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Add/Edit Post</h2>
+
+    <form class="contact-form" action="/edit/{{post.sno}}" method="post">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title" required value="{{post.title}}">
+        </div>
+        
+        <div class="mb-3">
+            <label for="tline" class="form-label">Tagline</label>
+            <input type="text" class="form-control" id="tline" name="tline" placeholder="Enter Tagline" required value="{{post.tagline}}">
+        </div>
+
+        <div class="mb-3">
+            <label for="slug" class="form-label">Slug</label>
+            <input type="text" class="form-control" id="slug" name="slug" placeholder="Enter Slug" required value="{{post.slug}}">
+        </div>
+        
+        <div class="mb-3">
+            <label for="content" class="form-label">Content</label>
+            <input class="form-control" id="content" name="content" placeholder="Enter Content" rows="5" required value="{{post.content}}"></input>
+        </div>
+        
+        <div class="mb-3">
+            <label for="img_file" class="form-label">Image File</label>
+            <input class="form-control" id="img_file" name="img_file" placeholder="Enter Image File Path" rows="2" required value="{{post.img_file}}"></input>
+        </div>
+        
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+        <br/>
+<br/>
+<br/>
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="mt-4">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+</div>
+
+{% endblock content %}

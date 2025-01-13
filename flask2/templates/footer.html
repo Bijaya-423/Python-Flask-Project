@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f4a261;
+}
+
+.footer p,
+.footer ul {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f4a261;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+</style>
+  </head>
+<body>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h2>About Us</h2>
+                <p>We are dedicated to providing the best services to our customers. Connect with us to learn more.</p>
+            </div>
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                   <!-- <a href="https://www.facebook.com/"><img src="https://cdn-icons-png.flaticon.com/256/124/124010.png" style="border-radius: 5px; padding: 4px;" alt="Facebook"></a>-->
+                   <a href="{{params['fb_url']}}" target="_blank"><img src="https://cdn-icons-png.flaticon.com/256/124/124010.png" style="border-radius: 5px; padding: 4px;" alt="Facebook"></a>
+                   
+                    <a href="{{params['tw_url']}}" target="_blank"><img src="https://img.freepik.com/free-vector/twitter-new-2023-x-logo-white-background-vector_1017-45422.jpg?ga=GA1.1.107681182.1728191006&semt=ais_hybrid" style="border-radius: 5px; padding: 4px;" alt="Twitter"></a>
+                    <a href="{{params['in_url']}}" target="_blank"><img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584852.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Coding Thunder Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

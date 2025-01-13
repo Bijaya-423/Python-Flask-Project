@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+<style>
+    /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #2c3e50; /* Updated color */
+}
+
+h1, h2, h3 {
+    color: #2980b9; /* Updated color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #ecf0f1; /* Updated color */
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #00796b; /* Green shade */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 20px;
+}
+
+.mission, .history {
+    background: #b2dfdb; /* Light green */
+    text-align: center;
+    border-radius: 8px;
+}
+
+.team {
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    max-width: 200px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.values {
+    text-align: center;
+}
+
+.value-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.value-item {
+    flex: 1;
+    padding: 20px;
+    background: #bbdefb; /* Light blue */
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background: #01579b; /* Dark blue */
+    color: #ecf0f1; /* Updated color */
+    text-align: center;
+    padding: 20px 0;
+}
+
+</style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <p>{{ params["about_text"] }}</p>
+        </div>
+    </header>
+
+    <section class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p>Hello i am Bijaya</p>
+            <p>{{ params["mission_statement"] }}</p>
+        </div>
+    </section>
+
+    <section class="history">
+        <div class="container">
+            <h2>Our Journey</h2>
+            <!--<p>Params debug: {{ params }}</p>-->
+        <p>{{ params["our_journey"] }}</p>
+        </div>
+    </section>
+
+    <section class="history">
+        <div class="container">
+            <h2>Mission in Technology:</h2>
+            <!--<p>Params debug: {{ params }}</p>-->
+        <p>{{ params["mission_technology"] }}</p>
+        </div>
+    </section>
+
+    <section class="history">
+        <div class="container">
+            <h2>Empowering Others:</h2>
+            <!--<p>Params debug: {{ params }}</p>-->
+        <p>{{ params["empowering_others"] }}</p>
+        </div>
+    </section>
+    
+
+    <section class="history">
+        <div class="container">
+            <h2>Graduate</h2>
+            <!--<p>Params debug: {{ params }}</p>-->
+        <p>{{ params["graduate"] }}</p>
+        </div>
+    </section>
+
+
+    <section class="team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="https://media.istockphoto.com/id/1392016982/photo/mixed-group-of-business-people-sitting-around-a-table-and-talking.jpg?s=612x612&w=is&k=20&c=HYwuJmIim5Fr9xlm0ebEQtA_VuXxPhUixcYPkmRf2SU=" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://media.istockphoto.com/id/579415250/photo/people-in-a-business-meeting.jpg?s=612x612&w=is&k=20&c=K1r6cx92i4MAmzVt4o0TUd8p-4FiU0Ye59SHrEyYpvA=" alt="Team Member 2">
+                    <h3>Jane Smith</h3>
+                    <p>Chief Operating Officer</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://media.istockphoto.com/id/655776152/photo/business-meeting-and-brainstorming-in-modern-office.jpg?s=612x612&w=is&k=20&c=YpyMzZxYqmNywl2pjyaM5w19B-8ouO04rC_qSPlB4Yw=" alt="Team Member 3">
+                    <h3>Emily Brown</h3>
+                    <p>Head of Marketing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values">
+    <div class="container">
+        <h2>Our Values</h2>
+        <div class="row value-list">
+            <div class="col-md-4 value-item">
+                <img src="https://media.istockphoto.com/id/1434119126/photo/team-diversity-business-and-meeting-at-table-to-have-conversation-for-group-project-planning.jpg?s=612x612&w=is&k=20&c=Sy3qXVmihb3MAgK5bIPWMqRBgD49FQ56RQZRGxJTAGg=" alt="Integrity" class="img-fluid mb-3">
+                <h3>Integrity</h3>
+                <p>We believe in doing the right thing, always.</p>
+            </div>
+            <div class="col-md-4 value-item">
+                <img src="https://media.istockphoto.com/id/483629308/photo/silhouettes-of-hikers-at-sunset.jpg?s=612x612&w=is&k=20&c=HPP0mNm7icdjepMC3BCDtSyuib-lrPGY0diC6KdYJ7g=" alt="Innovation" class="img-fluid mb-3">
+                <h3>Innovation</h3>
+                <p>We are committed to creating cutting-edge solutions.</p>
+            </div>
+            <div class="col-md-4 value-item">
+                <img src="https://media.istockphoto.com/id/1255754954/video/school-of-fish-sharks-swim-in-a-circle.jpg?s=640x640&k=20&c=TW7xOAOrYhiRBNadIvEe-gAiIbvg9zXBNlJVx7KS4DI=" alt="Community" class="img-fluid mb-3">
+                <h3>Community</h3>
+                <p>We strive to give back and make a positive impact.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer> -->
+</body>
+</html>
+
+
+{% endblock %}

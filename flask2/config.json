@@ -1,0 +1,37 @@
+{
+    "params":
+    {  
+        "local_server":"True",
+        "local_uri":"mysql+pymysql://root:@localhost/codingthunder",
+        "prod_uri":"mysql+pymysql://root:@localhost/codingthunder",
+        "fb_url":"https://facebook.com/codingthunder",
+        "tw_url":"https://x.com/codingthunder",
+        "in_url":"https://instagram.com/codingthunder",
+        "blog_name":"Coding Thunder",
+        "tag_line": "Heaven for programmers",
+        "gmail-user":"usermaster774@gmail.com",
+        "gmail-password":"User@2025",
+
+        "about_text":"Introduction: I am Bijaya Kumar Jena, a student with a strong passion for learning and growth. My journey, which began in the small town of Pipili, Odisha, has been shaped by the pursuit of knowledge, hard work, and the belief that education is the key to personal and professional transformation. From my early education in the 10th standard to my ongoing pursuit of a B.Tech degree, each phase of my life has been a step toward my mission of becoming a skilled and contributing member of society. ",
+
+        "mission_statement":"Mission Statement: My mission is to continue growing academically, to make a positive impact through technology, and to empower others to achieve their fullest potential. With a strong foundation in my early education and an ambition to excel in the field of technology, my mission is to be a bridge between innovative ideas and practical solutions. I strive to become a well-rounded individual capable of contributing not only to the tech industry but also to society at large.",
+        
+        "our_journey":"I began my academic journey at Astasambhu High School, where I completed my 10th standard education. The early years were formative, and it was during this time that I realized the importance of perseverance, discipline, and a focused approach toward learning. After finishing high school, I pursued my +2 at OSCS&T, a step that helped me delve deeper into the sciences and sparked my interest in technology and engineering.Currently, I am pursuing a Bachelor of Technology (B.Tech) degree, which I believe will provide me with the skills necessary to face the challenges of the modern world. The transition from high school to college has been a transformative experience, and I have developed a deep passion for computer science and engineering." ,
+
+        "mission_technology":"One of the key elements of my mission is to contribute to the field of technology, especially in areas that aim to simplify lives and improve productivity. I believe that technology has the potential to bring about significant changes in society, and I want to be a part of that change. I aspire to work on projects that bridge the gap between creativity and functionality, making technology accessible and beneficial to all.My education in B.Tech is already exposing me to various fields such as software development, data analysis, and artificial intelligence. I am particularly interested in exploring solutions that can aid in automation and problem-solving in everyday life. By focusing on these areas, I plan to contribute to innovations that not only advance technology but also support the growth of individuals and communities.",
+
+        "empowering_others":"In addition to my personal development, I aim to help others grow and achieve their potential. I strongly believe in the power of mentorship and collaboration. During my academic journey, I have realized that learning is most effective when shared. Therefore, my mission is not only to learn but also to pass on knowledge to my peers and juniors.By actively engaging in student organizations, workshops, and projects, I hope to inspire others to pursue their dreams and overcome obstacles. I want to be a role model for others who may come from humble beginnings like mine, showing them that with dedication and the right mindset, they too can achieve great things.",
+
+        "graduate":"Bijaya Kumar Jena B.Tech Student, OSCS&T +2 Graduate, Astasambhu High School 10th Graduate",
+        
+        "admin_user":"bijaya",
+        "admin_password":"subscribenow",
+
+        "no_of_posts":2,
+        "upload_location":"D:\\flask2\\static"
+
+
+
+    }
+
+}

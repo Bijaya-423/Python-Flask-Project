@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.icons8.com/ios7/600w/internet.png" type="image/x-icon">
+    <title>Blog Page</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        h1, h2, h3 {
+            color: #444;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .blog-post {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .blog-post p {
+            color: #666;
+        }
+
+        .blog-post .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .blog-post .read-more:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="text-white">My Blog</h1>
+    </header>
+    <br/>
+
+    {% for post in posts %}
+    
+    <div class="container py-5">
+      <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+              <div class="post-preview bg-light p-4 rounded shadow-sm">
+                  <a href="/post/{{post.slug}}" class="text-decoration-none text-dark">
+                      <h2 class="post-title fw-bold">
+                          {{ post.title }}
+                      </h2>
+                      <h4>{{ post.tagline[0:500] }}..</h4>
+                      <h3 class="post-subtitle text-muted">
+                           {{ post.content[0:100] }}...
+                      </h3>
+                  </a>
+                  <p class="post-meta mt-3 text-secondary">
+                      Posted by 
+                      <a href="#" class="text-primary fw-bold"> Posted by admin</a>
+                      on {{ post.date }}
+                  </p>
+                  {{ post.content[0:653] }}...
+              </div>
+              <hr class="my-4">
+          </div>
+      </div>
+    </div>
+    
+    {% endfor %}
+    
+    
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-preview">
+                    <!-- <a href="post.html">
+                        <h2 class="post-title">
+                            Man Must Explore, and this is exploration at its greatest
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Problems look mighty small from 150 miles up
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted By
+                        <a href="#">Start Bootstrap</a> 
+                        on September 24, 2018
+                    </p> -->
+                </div>
+                <!-- <hr> -->
+                <div class="clearfix">
+                    <a class="btn btn-primary float-left" href="{{prev}}">&larr; Previous</a>
+                    <a class="btn btn-primary float-right" href="{{next}}">Next &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}
